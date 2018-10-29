@@ -1,0 +1,15 @@
+﻿===============================================GameContext=================================================
+
+Enable-Migrations -ContextTypeName GameContext -MigrationsDirectory Migrations\Game
+
+add-migration -ConfigurationTypeName Entityframeworkcodefirst.Migrations.Game.Configuration "InitialCreate"
+
+update-database -ConfigurationTypeName Entityframeworkcodefirst.Migrations.Game.Configuration
+
+===============================================ApplicationDbContext=================================================
+
+Enable-Migrations -ContextTypeName ApplicationDbContext -MigrationsDirectory Migrations\Identity
+
+add-migration -ConfigurationTypeName Entityframeworkcodefirst.Migrations.Identity.Configuration "InitialIdentity"
+
+update-database -ConfigurationTypeName Entityframeworkcodefirst.Migrations.Identity.Configuration
