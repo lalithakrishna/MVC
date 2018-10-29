@@ -1,0 +1,30 @@
+﻿@model Vidly.ViewModels.DropdownViewmodel
+@{
+    ViewBag.Title = "Dropdown";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Choose a Value From Dropdown:</h2>
+@Html.DropDownList("Countries",new List<SelectListItem>
+{
+new SelectListItem {Text="UK" },
+new SelectListItem {Text="India" },
+new SelectListItem {Text="USA" },
+new SelectListItem {Text="Greenland" },
+},"Select Country")*@
+
+<h2>Choose a Value From Dropdown:</h2>
+@*<ul>
+    @foreach (var country in Model.country)
+    {
+        <li>@country.Name,@country.Id</li>
+    }
+</ul>*@
+
+<select id="ddlCountry" name="Id">
+    <option value="0">Please select</option>
+    @foreach (var country in Model.country)
+    {
+        <option value="@country.Id">@country.Name</option>
+    }
+</select>
