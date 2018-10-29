@@ -1,0 +1,20 @@
+﻿@using System.Web.UI.WebControls
+@using MVCTutorial.Models
+@model IEnumerable<MVCTutorial.Models.Player>
+
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<div style="font-family:Arial">
+    <h2>Employee List</h2>
+    <ul>
+        @foreach (Player player in @Model)
+        {
+            <li>
+                @Html.ActionLink(player.firstname, "Details", new {id=player.PlayerId})
+            </li>
+        }
+    </ul>
+    @Html.ActionLink("Back To List","Index","Team")
+</div>

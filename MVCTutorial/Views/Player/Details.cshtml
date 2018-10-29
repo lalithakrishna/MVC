@@ -1,0 +1,51 @@
+﻿@model MVCTutorial.Models.Player
+
+@{
+    ViewBag.Title = "Player Details";
+}
+<div style="font-family:Arial">
+    <h2>Player Details</h2>
+    <table style="font-family:Arial">
+        <tr>
+            <td>
+                <b>Player ID:</b>
+            </td>
+            <td>
+                @Model.PlayerId
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>First Name:</b>
+            </td>
+            <td>
+                @Model.firstname
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Last Name:</b>
+            </td>
+            <td>
+                @Model.lastname
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Position:</b>
+            </td>
+            <td>
+                @Model.position
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Team Name:</b>
+            </td>
+            <td>
+                @Model.TeamName
+            </td>
+        </tr>
+    </table>
+    @Html.ActionLink("Back To List", "Index",new {teamname=@Model.TeamName})
+</div>

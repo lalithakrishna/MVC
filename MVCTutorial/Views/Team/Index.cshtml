@@ -1,0 +1,19 @@
+﻿@using MVCTutorial.Models
+
+@model IEnumerable<Team>
+@{
+    ViewBag.Title = "Team List";
+}
+
+<div>
+    <h2>Team List</h2>
+    <ul>
+        @foreach (Team team in @Model)
+        {
+            <li>
+                @Html.ActionLink(team.TeamName, "Index", "Player",new { teamname = team.TeamName },null)
+            </li>
+        }
+    </ul>
+</div>
+
